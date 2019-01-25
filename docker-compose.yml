@@ -50,10 +50,14 @@ services:
     container_name: nginx-alpine
     ports:
       - 8080:80
+      - 443:443
     networks:
       - sonar
     volumes:
       - ${PWD}/nginx/conf.d/sonarqube.conf:/etc/nginx/conf.d/sonarqube.conf
+      - ${PWD}/nginx/ssl:/etc/ssl
+      - ${PWD}/nginx/log:/var/log/nginx
+
     depends_on:
       - sonarqube
 
