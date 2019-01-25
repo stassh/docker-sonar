@@ -12,6 +12,9 @@ gradle-app.setting
 
 sonarqube_*
 postgresql_*
+nginx/log/**
+nginx/ssl/**
+
 
 # # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
 # gradle/wrapper/gradle-wrapper.properties
